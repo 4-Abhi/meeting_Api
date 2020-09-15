@@ -22,7 +22,7 @@ app.use("/api", authRoutes);
 app.use("/api/metting", mettingRoutes);
 app.use("/api/mettingUser", mettingUser);
 
-const port = 4004;
-app.listen(4004, () => {
+const port = process.env.PORT || 4004;
+app.listen(port, () => {
     console.log("Process start in 4004");
 })
